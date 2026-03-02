@@ -119,11 +119,11 @@ type Avatars struct {
 	CreatedAt time.Time `gorm:"autoCreateTime;default:now()"`
 }
 
-func (Codes) TableName() string          { return "ds_codes" }
-func (Profiles) TableName() string       { return "ds_profiles" }
-func (APIKeys) TableName() string        { return "ds_api_keys" }
-func (Users) TableName() string          { return "ds_users" }
-func (Subscriptions) TableName() string  { return "ds_subscriptions" }
-func (Gemini) TableName() string         { return "ds_gemini" }
-func (GeminiHistory) TableName() string  { return "ds_gemini_history" }
-func (Avatars) TableName() string        { return "ds_avatars" }
+func (Codes) TableName() string          { return "ac_codes" }
+func (Profiles) TableName() string       { return "ac_profiles" }
+func (APIKeys) TableName() string        { return "ac_api_keys" }
+func (Users) TableName() string          { return "ac_users" }
+func (Subscriptions) TableName() string  { return "ac_subscriptions" }
+func (Gemini) TableName() string         { return "ac_gemini" }
+func (GeminiHistory) TableName() string  { return "ac_gemini_history" }
+func (Avatars) TableName() string        { return "ac_avatars" }
