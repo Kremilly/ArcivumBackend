@@ -9,31 +9,24 @@ import (
 func main() {
 	configs.InitDB()
 
-	configs.DB.Migrator().DropTable(
-		// &models.APIKeys{},
-		// &models.Backups{},
-		// &models.Users{},
-		// &models.Profiles{},
-		// &models.Databases{},
-		// &models.Gemini{},
-		// &models.GeminiHistory{},
-		// &models.Subscriptions{},
-	)
+	// configs.DB.Migrator().DropTable(
+	// 	&models.APIKeys{},
+	// 	&models.Backups{},
+	// 	&models.Users{},
+	// 	&models.Profiles{},
+	// 	&models.Databases{},
+	// 	&models.Gemini{},
+	// )
 
 	err := configs.DB.AutoMigrate(
 		&models.Codes{},
 		&models.APIKeys{},
-		&models.Backups{},
-		&models.Databases{},
 		&models.Users{},
 		&models.Profiles{},
 		&models.Gemini{},
 		&models.GeminiHistory{},
 		&models.Subscriptions{},
 		&models.Avatars{},
-		&models.DumpAccessLogs{},
-		&models.TeamMembers{},
-		&models.Teams{},
 	)
 
 	if err != nil {
